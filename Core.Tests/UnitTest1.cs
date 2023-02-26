@@ -99,12 +99,12 @@ public class UnitTest1
     public void If_basket_total_price_is_200_discount_is_5_percent()
     {
         List<Item> items = new List<Item>();
-        items.Add(new Item("item A", 1, 201));
+        items.Add(new Item("item A", 1, 200));
 
         ShoppingBasket shoppingBasket = new ShoppingBasket(items);
 
         var totalPrice = shoppingBasket.Get_percentage_discount();
-        totalPrice.Should().Be(10);
+        totalPrice.Should().Be(5);
 
     }
 
